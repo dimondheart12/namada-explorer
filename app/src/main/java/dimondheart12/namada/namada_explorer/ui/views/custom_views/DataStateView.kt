@@ -223,6 +223,28 @@ fun <Data : Any> DataStateView(
                 items(count = data.itemCount) { index ->
                     content(data[index]!!)
                 }
+
+                when (val loadMoreState = data.loadState.append) {
+                    LoadState.Loading -> item {
+                        Box(modifier = Modifier.fillMaxWidth()) {
+                            CircularProgressIndicator(modifier = Modifier.align(Alignment.Center))
+                        }
+                    }
+
+                    is LoadState.NotLoading -> {
+
+                    }
+
+                    is LoadState.Error -> item {
+                        Box(modifier = Modifier.fillMaxWidth()) {
+                            Text(
+                                text = loadMoreState.toString(),
+                                color = MaterialTheme.colorScheme.error,
+                                modifier = Modifier.align(Alignment.Center)
+                            )
+                        }
+                    }
+                }
             }
 
             is LoadState.Error -> item {
