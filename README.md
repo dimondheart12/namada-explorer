@@ -3,7 +3,7 @@
 Namada Explorer is an application designed to display indexer data related to Namada. It serves as a platform for users to explore and analyze information gathered from various sources pertaining to Namada.
 
 ## Install
-Download apk file (https://github.com/dimondheart12/namada-explorer/blob/master/app.apk)[https://github.com/dimondheart12/namada-explorer/blob/master/app.apk]
+Download apk file https://github.com/dimondheart12/namada-explorer/blob/master/app.apk
 
 ## Features
 - **Home**: Displays essential information such as network chain, total block count, number of validators, and the timestamp of the latest block.
